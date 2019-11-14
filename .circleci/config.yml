@@ -34,7 +34,7 @@ jobs:
       #     command: powershell.exe  scripts\codesign.ps1
       - run:
           name: Confirm if Signtool is installed
-          command: signtool.exe sign /t 
+          command: signtool sign /t 
 
 workflows:
   build-and-sign:
