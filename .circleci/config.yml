@@ -12,14 +12,14 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGame.csproj" }}
+            - dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGameCS.csproj" }}
       - run:
           name: "Install project dependencies"
           command: dotnet.exe restore
       - save_cache:
           paths:
             - C:\Users\circleci\.nuget\packages
-          key: dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGame.csproj" }}
+          key: dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGameCS.csproj" }}
 workflows:
   build-and-test:
     jobs:
