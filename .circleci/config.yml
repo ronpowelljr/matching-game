@@ -23,6 +23,9 @@ jobs:
       - run:
           name: "Create Windows Desktop Executable"
           command: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
+      - store_artifacts:
+          path: C:\Users\circleci\project\MatchingGame\bin\Release\netcoreapp3.0\win-x64\publish\MatchingGame.exe
+          
 workflows:
   build-and-sign:
     jobs:
