@@ -26,11 +26,9 @@ jobs:
       - store_artifacts:
           path: C:\Users\circleci\project\MatchingGame\bin\Release\netcoreapp3.0\win-x64\publish\
           destination: executable
-  # sign:
-  #   description: Code Sign the resulting executable file from the build step.
-  #   executor: 
-  #     name: windows/default
-  #   steps:
+      - run:
+          name: Set up a self-signed certificate to be able to Codesign
+          command: powershell.exe scripts\SetupCerts.ps1
 
 workflows:
   build-and-sign:
