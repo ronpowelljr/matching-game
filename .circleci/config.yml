@@ -20,7 +20,9 @@ jobs:
           paths:
             - C:\Users\circleci\.nuget\packages
           key: dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGameCS.csproj" }}
-      - 
+      - run:
+          name: "Create Windows Desktop Executable"
+          command: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
 workflows:
   build-and-sign:
     jobs:
