@@ -25,6 +25,12 @@ jobs:
           command: dotnet publish -r win-x64 -c Release /p:PublishSingleFile=true
       - store_artifacts:
           path: C:\Users\circleci\project\MatchingGame\bin\Release\netcoreapp3.0\win-x64\publish\
+          destination: executable
+  # sign:
+  #   description: Code Sign the resulting executable file from the build step.
+  #   executor: 
+  #     name: windows/default
+  #   steps:
 
 workflows:
   build-and-sign:
