@@ -1,4 +1,4 @@
-#  on CircleCI on Windows
+# Set up a self-signed certificate to be able to code sign on CircleCI on Windows
 
 $params = @{
   Subject = "CN=CircleCI Test"
