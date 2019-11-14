@@ -20,7 +20,8 @@ jobs:
           paths:
             - C:\Users\circleci\.nuget\packages
           key: dotnet-packages-v1-{{ checksum "MatchingGame/MatchingGameCS.csproj" }}
+      - 
 workflows:
-  build-and-test:
+  build-and-sign:
     jobs:
       - build
