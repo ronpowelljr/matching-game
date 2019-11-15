@@ -1,6 +1,6 @@
 # Simple Desktop Application to Demonstrate COde Signing on Windows
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![CircleCI](https://circleci.com/gh/daumie/matching-game.svg?style=svg)](https://circleci.com/gh/daumie/matching-game) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 In this sample windows application, a player matches pairs of hidden icons
 
