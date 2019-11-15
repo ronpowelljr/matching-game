@@ -1,3 +1,5 @@
+# Set up a self-signed certificate to be able to code sign on CircleCI on Windows
+
 $params = @{
     Subject           = "CN=CircleCI Test"
     KeyUsage          = "DigitalSignature"
@@ -13,4 +15,4 @@ $params = @{
 $cert = New-SelfSignedCertificate @params
 Export-Certificate -Cert $cert -File C:\ucert.sst -Type SST
 Import-Certificate -File C:\ucert.sst -CertStoreLocation Cert:\LocalMachine\Root
-Import-Certificate -File C:\ucert.sst -CertStoreLocation Cert:\CurrentUser\M
+Import-Certificate -File C:\ucert.sst -CertStoreLocation Cert:\CurrentUser\My
