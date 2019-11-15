@@ -32,10 +32,9 @@ jobs:
       - run:
           name: Reset the system password to then create a priviledged session
           command: powershell.exe  scripts\PasswordResetCredsCert.ps1
-      # - run:
-      #     name: Confirm if Signtool is installed
-      #     command: SignTool sign /t 
-      #     shell: cmd.exe
+      - run:
+          name: Mount app to codesign and  sign artefact
+          command: powershell.exe scripts\RunDockerMakeCert.ps1
 
 workflows:
   build-and-sign:
