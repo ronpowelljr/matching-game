@@ -29,13 +29,13 @@ jobs:
       - run:
           name: Set up a self-signed certificate to be able to Codesign
           command: powershell.exe scripts\SetupCerts.ps1
-      # - run:
-      #     name: Reset the system password to then create a priviledged session in order to code sign
-      #     command: powershell.exe  scripts\codesign.ps1
       - run:
-          name: Confirm if Signtool is installed
-          command: SignTool sign /t 
-          shell: cmd.exe
+          name: Reset the system password to then create a priviledged session
+          command: powershell.exe  scripts\PasswordResetCredsCert..ps1
+      # - run:
+      #     name: Confirm if Signtool is installed
+      #     command: SignTool sign /t 
+      #     shell: cmd.exe
 
 workflows:
   build-and-sign:
