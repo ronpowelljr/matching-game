@@ -3,11 +3,13 @@ version: 2.1
 orbs:
   windows: circleci/windows@2.2.0
 
+executors:
+  winvm: windows/default
+
 jobs:
   build:
     description: Build application with Release configuration
-    executor:
-      name: windows/default
+    executor: winvm
     steps:
       - checkout
       - restore_cache:
