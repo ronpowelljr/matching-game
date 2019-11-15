@@ -39,7 +39,7 @@ jobs:
           command: powershell.exe scripts\RunDockerMakeCert.ps1
       - run:
           name: Confirm if docker if docker if docker is installed 
-          command: docker info
+          command: docker pull mcr.microsoft.com/windows/servercore:ltsc2019
 
 workflows:
   build-and-sign:
