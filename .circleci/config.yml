@@ -39,7 +39,7 @@ jobs:
           command: powershell.exe scripts\RunDockerMakeCert.ps1
       - run:
           name: Confirm if docker if docker if docker is installed 
-          command: docker run -v "C:\Users\circleci\project\MatchingGame\:C:\testapp" -it  mcr.microsoft.com/windows/servercore:ltsc2019 powershell.exe -executionpolicy bypass C:\testapp\scripts\makecert.ps1
+          command: winpty docker run -v "C:\Users\circleci\project\MatchingGame\:C:\testapp" -it  mcr.microsoft.com/windows/servercore:ltsc2019 powershell.exe -executionpolicy bypass C:\testapp\scripts\makecert.ps1
 
 workflows:
   build-and-sign:
