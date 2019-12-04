@@ -35,8 +35,11 @@ jobs:
           name: Reset the system password to then create a priviledged session
           command: powershell.exe  scripts\PasswordResetCredsCert.ps1
       - run:
-          name: Mount app to codesign and  sign artefact
-          command: powershell.exe scripts\RunDockerMakeCert.ps1
+          name: List Contents of "executable/ directory
+          command: dir ./executable/
+      # - run:
+      #     name: Mount app to codesign and  sign artefact
+      #     command: powershell.exe scripts\RunDockerMakeCert.ps1
 
 workflows:
   build-and-sign:
