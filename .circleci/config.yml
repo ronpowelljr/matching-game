@@ -37,9 +37,6 @@ jobs:
       - run:
           name: Mount app to codesign and  sign artefact
           command: powershell.exe scripts\RunDockerMakeCert.ps1
-      - run:
-          name: Confirm if docker if docker if docker is installed 
-          command: powershell.exe scripts\RunDockerMakeCert.ps1
 
 workflows:
   build-and-sign:
