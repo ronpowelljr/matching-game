@@ -39,7 +39,7 @@ jobs:
           command: dir  C:\Users\circleci\project\MatchingGame\bin\Release\netcoreapp3.0\win-x64\publish\
       - run:
           name: Mount app to codesign and  sign artefact
-          command: powershell.exe scripts\RunDockerMakeCert.ps1
+          command: powershell.exe scripts\makecert.ps1
 
 workflows:
   build-and-sign:
