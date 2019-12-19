@@ -31,9 +31,9 @@ jobs:
       - run:
           name: Set up a self-signed certificate to be able to Codesign
           command: powershell.exe scripts\SetupCertsLocal.ps1
-      - run:
-          name: Reset the system password to then create a priviledged session
-          command: powershell.exe  scripts\PasswordResetCredsCert.ps1
+      # - run:
+      #    name: Reset the system password to then create a priviledged session
+      #    command: powershell.exe  scripts\PasswordResetCredsCert.ps1
       - run:
           name: List Contents of artefact directory
           command: dir  C:\Users\circleci\project\MatchingGame\bin\Release\netcoreapp3.0\win-x64\publish\
